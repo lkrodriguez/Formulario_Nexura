@@ -6,7 +6,7 @@
  
 class Conexion{	  
     public static function Conectar() {        
-        define('servidor','10.60.64.102');
+        define('servidor','localhost');
         define('nombre_bd','prueba_tecnica_dev');
         define('usuario','root');
         define('password','');					        

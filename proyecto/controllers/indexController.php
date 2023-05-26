@@ -1,6 +1,6 @@
 <?php
-include_once 'models/empleados.php';
-
+error_reporting(E_ALL);
+include_once 'models\empleados.php';
 
 class indexController{
 
@@ -25,7 +25,12 @@ class indexController{
 	}
 
 	public function guardar(){
-		$emp =new empleado();
+		/*
+		 * SE CAPTURAN LOS DATOS DEL FORMULARIO $_POST['nomEmp'];
+		 * Y SE ENVIA A BASE DE DATOS $nombre 
+		 */
+
+		$emp = new empleado();
 		$emp->$nombre = $_POST['nomEmp'];
 		$emp->$email = $_POST['emailEmp'];
 		$emp->$sexo = $_POST['genero'];
@@ -34,18 +39,14 @@ class indexController{
 		$emp->$descripcion = $_POST['desc'];
 		$roles = array();
 		if (isset($_POST['roles'])) {
-			$emp->roles = $_POST['roles'];			
+			$emp->id_rol = $_POST['roles'];			
 		}else{
 			$emp->roles = 0;
-		}
+		};
 		
 		
-
-
-
-
-		
-		
+		$this->MODEL->registrar($emp);
+		//header("Location:index.php");
 		
 		
 	}

@@ -1,4 +1,18 @@
-<!--FALTA LOS REQUIRED CON JQUERY-->
+<script>  
+$(document).ready(function(){
+	$("input[name=genero]").click(function(){
+            var areaCSI = $("input[name='genero']:checked").map(function () {return this.value; }).get(); 
+			if (areaCSI == '') {
+				console.log('pp');
+				
+			} else {
+				
+			}			
+                       
+    });
+	
+});
+</script>
 
 
 
@@ -16,26 +30,41 @@
 
         <div class="form-group">
             <label for="emailEmp">Correo Electronico *</label>
-            <input type="email" class="form-control" id="emailEmp" name="emailEmp" placeholder="name@example.com" required >
+            <input type="email" class="form-control" id="emailEmp" name="emailEmp" placeholder="Correo@example.com" required >
         </div>
         <br>
 
         <div class="form-check">
         <label for="genero">Sexo *</label>
         <br>
-        <input class="form-check-input" type="radio" name="genero[]" id="genero1" value="Masculino" checked>
+        <input class="form-check-input" type="radio" name="genero" id="genero" value="Masculino" >
         <label class="form-check-label" for="genero1">
             Masculino
         </label>
         </div>
         <div class="form-check">
-        <input class="form-check-input" type="radio" name="genero[]" id="genero2" value="Femenino">
+        <input class="form-check-input" type="radio" name="genero" id="genero" value="Femenino">
         <label class="form-check-label" for="genero2">
             Femenino
         </label>
         </div>
         <br> 
+		
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
         <div class="form-group">
             <label for="areaEmp">Area *</label>
 			<select class="form-control" id="areaEmp" name="areaEmp" required >
@@ -57,11 +86,11 @@
 
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="boletin">
-            <label class="form-check-label" for="boletin" id="boletin" name="boletin">Desea recibir Boletin ?</label>
+            <label class="form-check-label" for="boletin" id="boletin" name="boletin" value="1" >Desea recibir Boletin ?</label>
         </div>
         <br>
 
-
+		
         <div class="form-check">
             <label >Roles *</label>
                                                 
@@ -86,7 +115,8 @@
             </div>        
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        	
+			<input type="submit" name="btnGuardar" class="btn btn-dark" value="Guardar">
 
 </form>
     

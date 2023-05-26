@@ -1,9 +1,8 @@
 <?php 
 
-/**
+/*
  * CADENA DE CONEXION A LA BASE DE DATOS
  */
-
  include("conexion\conexion.php");
 
 class empleado{
@@ -15,7 +14,7 @@ class empleado{
     public $area_id;
     public $boletin;
     public $descripcion;
-
+    public $id_rol;
 
     public function __construct() {
         try {
@@ -63,6 +62,16 @@ class empleado{
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    } 
+
+    public function registrar(empleado $data){
+        try {
+            
+            $query = "INSERT INTO prueba_tecnica_dev.empleado (nombre, email, sexo, area_id, boletin, descripcion, id_rol)VALUES (?,?,?,?,?,?,?)";
+                $this->cdn->prepare($query)->execute(array($data->nombre,$data->email,$data->sexo,$data->area_id,$data->boletin,$data->descripcion,$data->id_rol));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
 
@@ -71,13 +80,5 @@ class empleado{
 
 
 }
-
-
-
-
-
-
-
-
 
 ?>
