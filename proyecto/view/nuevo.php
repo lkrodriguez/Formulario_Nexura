@@ -1,44 +1,4 @@
-<script>
-$(document).ready(function(){ 
-        $(".back").hide();
-        $(".front").hide();
-        $(".diagCsiF").hide();
-        $(".usercl").hide();
-
-        $("input[name=areaCSI]").click(function(){
-            var areaCSI = $("input[name='areaCSI']:checked").map(function () {return this.value; }).get();          
-            if(areaCSI == "BACKOFFICE"){ 
-                $(".back").show();
-                $(".front").hide();
-                $('#nombreBack').prop("required", true);
-                $('#nombre').removeAttr("required");
-            }else if(areaCSI == 'FRONTOFFICE'){ 
-                $(".back").hide();
-                $(".front").show();
-                $('#nombre').prop("required", true);
-                $('#nombreBack').removeAttr("required");                
-            }            
-        });
-
-
-        $("input[name=callCenter]").click(function(){
-            var callCenter = $("input[name='callCenter']:checked").map(function () {return this.value; }).get();          
-            if(callCenter == "SI"){ 
-                $(".diagCsiF").hide();
-                $(".usercl").hide();
-                $('#diagnosticoCsiF').removeAttr("required");  
-                $('#usuarioCallCenter').removeAttr("required");  
-            }else if(callCenter == 'NO'){ 
-                $(".diagCsiF").show();
-                $(".usercl").show(); 
-                $('#diagnosticoCsiF').prop("required", true);
-                $('#usuarioCallCenter').prop("required", true);             
-            }
-            
-        });
-
-});
-</script>
+<!--FALTA LOS REQUIRED CON JQUERY-->
 
 
 
@@ -106,19 +66,19 @@ $(document).ready(function(){
             <label >Roles *</label>
                                                 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="1">
+                    <input class="form-check-input" type="checkbox" name="roles[]" id="roles1" value="1">
                     <label class="form-check-label" >
                     Profesional de proyectos - Desarrollador
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="5">
+                    <input class="form-check-input" type="checkbox" name="roles[]" id="roles5" value="5">
                     <label class="form-check-label" >
 					Gerente Estrategico
                     </label>
                 </div> 
 				<div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="7">
+                    <input class="form-check-input" type="checkbox" name="roles[]" id="roles7" value="7">
                     <label class="form-check-label" >
                     Auxiliar Adminitrativo
                     </label>

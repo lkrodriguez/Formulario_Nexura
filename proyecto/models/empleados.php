@@ -9,7 +9,6 @@
 class empleado{
 
     public $cdn;
-    public $id;
     public $nombre;
     public $email;
     public $sexo;
