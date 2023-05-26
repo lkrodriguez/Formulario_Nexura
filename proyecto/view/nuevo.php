@@ -106,19 +106,19 @@ $(document).ready(function(){
             <label >Roles *</label>
                                                 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="areaCSI" id="areaCSI" value="1">
+                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="1">
                     <label class="form-check-label" >
                     Profesional de proyectos - Desarrollador
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="areaCSI" id="areaCSI" value="FRONTOFFICE">
+                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="5">
                     <label class="form-check-label" >
 					Gerente Estrategico
                     </label>
                 </div> 
 				<div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="areaCSI" id="areaCSI" value="7">
+                    <input class="form-check-input" type="checkbox" name="roles" id="roles" value="7">
                     <label class="form-check-label" >
                     Auxiliar Adminitrativo
                     </label>
